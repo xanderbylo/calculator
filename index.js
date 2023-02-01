@@ -71,6 +71,7 @@ seven.addEventListener('click', () => {
         displayValue.textContent += '7';
     }
 })
+
 let eight = document.querySelector('#eight');
 eight.addEventListener('click', () => {
     if (displayValue.textContent == '0') {
@@ -137,6 +138,11 @@ function divide(a, b) {
     let divSum = parseFloat(a) / parseFloat(b);
     return divSum;
 }
+
+let equalsBtn = document.querySelector('#equals');
+equalsBtn.addEventListener('click', () => {
+    displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+})
 
 function operate(a, operator, b) {
     if (operator == '+') {
