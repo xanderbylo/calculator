@@ -1,5 +1,6 @@
 let displayValue = document.querySelector('#display')
 let displayStore = '';
+console.log(displayStore);
 let operator = '';
 
 let zero = document.querySelector('#zero');
@@ -91,27 +92,51 @@ nine.addEventListener('click', () => {
 })
 
 let divideBtn = document.querySelector('#divide');
-divideBtn.addEventListener('click', () => {
+divideBtn.addEventListener('click', () => { 
+    if (operator == '') {
+        operator = '/';
+    } else {
+        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        operator = '/';
+    }
+
     displayStore = displayValue.textContent;
-    operator = '/';
 })
 
 let multiplyBtn = document.querySelector('#multiply');
 multiplyBtn.addEventListener('click', () => {
+    if (operator == '') {
+        operator = '*';
+    } else {
+        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        operator = '*';
+    }
+
     displayStore = displayValue.textContent;
-    operator = '*';
 })
 
 let subtractBtn = document.querySelector('#subtract');
 subtractBtn.addEventListener('click', () => {
+    if (operator == '') {
+        operator = '-';
+    } else {
+        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        operator = '-';
+    }
+
     displayStore = displayValue.textContent;
-    operator = '-';
 })
 
 let addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', () => {
+    if (operator == '') {
+        operator = '+';
+    } else {
+        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        operator = '+';
+    }
+
     displayStore = displayValue.textContent;
-    operator = '+';
 })
 
 function add(a, b) {
@@ -157,3 +182,8 @@ function operate(a, operator, b) {
         return 'Invalid operator';
     }
 }
+
+/* console.log('op: ' + operator);
+    console.log('val: ' + displayValue.textContent);
+    console.log('store: ' + displayStore.textContent);
+    console.log('store: ' + displayStore); */
