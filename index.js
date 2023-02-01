@@ -89,52 +89,52 @@ nine.addEventListener('click', () => {
     }
 })
 
-let divide = document.querySelector('#divide');
-divide.addEventListener('click', () => {
-    displayStore = displayValue;
+let divideBtn = document.querySelector('#divide');
+divideBtn.addEventListener('click', () => {
+    displayStore = displayValue.textContent;
     operator = '/';
 })
 
-let multiply = document.querySelector('#multiply');
-multiply.addEventListener('click', () => {
-    displayStore = displayValue;
+let multiplyBtn = document.querySelector('#multiply');
+multiplyBtn.addEventListener('click', () => {
+    displayStore = displayValue.textContent;
     operator = '*';
 })
 
-let subtract = document.querySelector('#subtract');
-subtract.addEventListener('click', () => {
-    displayStore = displayValue;
+let subtractBtn = document.querySelector('#subtract');
+subtractBtn.addEventListener('click', () => {
+    displayStore = displayValue.textContent;
     operator = '-';
 })
 
-let add = document.querySelector('#add');
-add.addEventListener('click', () => {
-    displayStore = displayValue;
+let addBtn = document.querySelector('#add');
+addBtn.addEventListener('click', () => {
+    displayStore = displayValue.textContent;
     operator = '+';
 })
 
 function add(a, b) {
-    let addSum = a + b;
+    let addSum = parseFloat(a) + parseFloat(b);
     return addSum;
 }
 
 function subtract(a, b) {
-    let subSum = a - b;
+    let subSum = parseFloat(a) - parseFloat(b);
     return subSum;
 }
 
 function multiply(a, b) {
-    let multiSum = a * b;
+    let multiSum = parseFloat(a) * parseFloat(b);
     return multiSum;
 }
 
 function multiply(a, b) {
-    let multiSum = a * b;
+    let multiSum = parseFloat(a) * parseFloat(b);
     return multiSum;
 }
 
 function divide(a, b) {
-    let divSum = a / b;
+    let divSum = parseFloat(a) / parseFloat(b);
     return divSum;
 }
 
