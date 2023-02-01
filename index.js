@@ -1,4 +1,6 @@
 let displayValue = document.querySelector('#display')
+let displayStore = '';
+let operator = '';
 
 let zero = document.querySelector('#zero');
 zero.addEventListener('click', () => {
@@ -87,6 +89,29 @@ nine.addEventListener('click', () => {
     }
 })
 
+let divide = document.querySelector('#divide');
+divide.addEventListener('click', () => {
+    displayStore = displayValue;
+    operator = '/';
+})
+
+let multiply = document.querySelector('#multiply');
+multiply.addEventListener('click', () => {
+    displayStore = displayValue;
+    operator = '*';
+})
+
+let subtract = document.querySelector('#subtract');
+subtract.addEventListener('click', () => {
+    displayStore = displayValue;
+    operator = '-';
+})
+
+let add = document.querySelector('#add');
+add.addEventListener('click', () => {
+    displayStore = displayValue;
+    operator = '+';
+})
 
 function add(a, b) {
     let addSum = a + b;
