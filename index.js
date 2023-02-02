@@ -206,6 +206,15 @@ clearBtn.addEventListener('click', () => {
     allowOperate = false;
 })
 
+let deleteBtn = document.querySelector('#delete');
+deleteBtn.addEventListener('click', () => {
+    if (displayValue.textContent.length == 1) {
+        displayValue.textContent = '0';
+    } else {
+        displayValue.textContent = displayValue.textContent.slice(0, -1);
+    }
+})
+
 function add(a, b) {
     let addSum = parseFloat(a) + parseFloat(b);
     return addSum;
@@ -214,11 +223,6 @@ function add(a, b) {
 function subtract(a, b) {
     let subSum = parseFloat(a) - parseFloat(b);
     return subSum;
-}
-
-function multiply(a, b) {
-    let multiSum = parseFloat(a) * parseFloat(b);
-    return multiSum;
 }
 
 function multiply(a, b) {
