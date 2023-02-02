@@ -238,6 +238,8 @@ function operate(a, operator, b) {
         return subtract(a, b);
     } else if (operator == '*') {
         return multiply(a, b);
+    } else if (operator == '/' && displayValue.textContent == '0') {
+        return 'LOL';
     } else if (operator == '/') {
         return divide(a, b);
     } else {
