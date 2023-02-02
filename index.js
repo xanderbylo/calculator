@@ -197,6 +197,15 @@ equalsBtn.addEventListener('click', () => {
     }
 })
 
+let clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', () => {
+    displayValue.textContent = '0';
+    displayStore = '';
+    operator = '';
+    resetDisplay = false;
+    allowOperate = false;
+})
+
 function add(a, b) {
     let addSum = parseFloat(a) + parseFloat(b);
     return addSum;
