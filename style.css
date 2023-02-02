@@ -21,6 +21,7 @@ body {
 
 #display {
     font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
     text-align: right;
     border: 2px solid black;
     border-radius: 5px;
@@ -33,6 +34,7 @@ body {
 }
 
 button {
+    font-family: 'Orbitron', sans-serif;
     width: 81.5px;
     font-size: 20px;
     margin-top: 10px;
