@@ -1,10 +1,14 @@
-body {
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
 }
 
 #calculator {
@@ -16,8 +20,34 @@ body {
 }
 
 #display {
+    font-size: 50px;
     text-align: right;
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 81.5px;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px;
+    padding: 20px;
+}
+
+.btn-long {
+    margin-top: 20px;
+    width: 173px;
+    
+}
+
+.btn-digit {
+    background-color: #e1fa51;
 }
