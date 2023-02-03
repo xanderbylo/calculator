@@ -124,6 +124,15 @@ nine.addEventListener('click', () => {
     allowOperate = true;
 })
 
+let decimal = document.querySelector('#decimal');
+decimal.addEventListener('click', () => {
+    if (displayValue.textContent.includes('.')) {
+        return;
+    } else {
+        displayValue.textContent += '.';
+    }
+})
+
 let divideBtn = document.querySelector('#divide');
 divideBtn.addEventListener('click', () => { 
     if (allowOperate == false) {
