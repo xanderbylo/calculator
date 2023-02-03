@@ -140,7 +140,7 @@ divideBtn.addEventListener('click', () => {
     } else if (operator == '') {
         operator = '/';
     } else {
-        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
         operator = '/';
     }
 
@@ -158,7 +158,7 @@ multiplyBtn.addEventListener('click', () => {
     } else if (operator == '') {
         operator = '*';
     } else {
-        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
         operator = '*';
     }
 
@@ -174,7 +174,7 @@ subtractBtn.addEventListener('click', () => {
     } else if (operator == '') {
         operator = '-';
     } else {
-        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
         operator = '-';
     }
 
@@ -190,7 +190,7 @@ addBtn.addEventListener('click', () => {
     } else if (operator == '') {
         operator = '+';
     } else {
-        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
         operator = '+';
     }
 
@@ -202,7 +202,7 @@ addBtn.addEventListener('click', () => {
 let equalsBtn = document.querySelector('#equals');
 equalsBtn.addEventListener('click', () => {
     if (operator !== '') {
-        displayValue.textContent = operate(displayStore, operator, displayValue.textContent);
+        displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
     }
 })
 
