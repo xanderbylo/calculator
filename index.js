@@ -203,6 +203,7 @@ let equalsBtn = document.querySelector('#equals');
 equalsBtn.addEventListener('click', () => {
     if (operator !== '') {
         displayValue.textContent = +operate(displayStore, operator, displayValue.textContent).toFixed(3);
+        operator = '';
     }
 })
 
