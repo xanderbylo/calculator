@@ -1,6 +1,4 @@
 # :abacus: Calculator
-🧮 A JavaScript calculator that runs in the browser
-
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/xanderbylo/calculator) 
 
@@ -18,6 +16,7 @@ A JavaScript calculator built as the last project of the Foundations Course for 
 
 ## :floppy_disk: Technologies
 
+* Chrome DevTools
 * CSS
 * Git
 * GitHub
